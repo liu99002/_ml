@@ -9,4 +9,5 @@ def hillClimbing(x, height, neighbor, max_fail=10000):
             fail += 1
             if fail > max_fail:
                 return x
+            
 
