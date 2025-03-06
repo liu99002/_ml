@@ -1,4 +1,6 @@
-import gd  # 假設已經有 gd.gradientDescendent 函式
+import math
+import numpy as np
+from numpy.linalg import norm
 import numpy as np
 
 # 七段顯示器的真值表（輸入：7 位元，輸出：4 位元二進制）
@@ -42,9 +44,34 @@ def loss_function(w):
     predictions = input_vectors @ w  # 預測輸出
     return np.mean((predictions - target_outputs) ** 2)  # MSE
 
+# 函數 f 對變數 k 的偏微分: df / dk
+def df(f, p, k, h=0.01):
+    p1 = p.copy()
+    p1[k] = p[k]+h
+    return (f(p1) - f(p)) / h
+
+# 函數 f 在點 p 上的梯度
+def grad(f, p, h=0.01):
+    gp = p.copy()
+    for k in range(len(p)):
+        gp[k] = df(f, p, k, h)
+    return gp
+
+# 使用梯度下降法尋找函數最低點
+def gradientDescendent(f, p0, h=0.01, max_loops=10000000, dump_period=1000):
+    p = p0.copy()
+    for i in range(max_loops):
+        fp = f(p)
+        gp = grad(f, p) # 計算梯度 gp
+        glen = norm(gp) # norm = 梯度的長度 (步伐大小)
+        if i%dump_period == 0: 
+            print('{:05d}:  f(p)={:.3f} glen={:.5f}\n'.format(i, fp, glen))
+        p =  [pi - gi * h for pi, gi in zip(p, gp)] # 向 gh 方向走一小步
+    print('{:05d}:  f(p)={:.3f} glen={:.5f}\n'.format(i, fp, glen))
+    return p # 傳回最低點！
+
 # 使用梯度下降法來調整權重
-p = weights.flatten().tolist()  # 攤平成 1D 列表
-gd.gradientDescendent(loss_function, p)
+p = gradientDescendent(loss_function, weights.flatten().tolist())
 
 # 訓練後的權重
 trained_weights = np.array(p).reshape(7, 4)
@@ -58,4 +85,4 @@ def predict(segment_input):
 for num, segment in seven_segment_truth_table.items():
     binary_prediction = predict(np.array(segment))
     binary_str = "".join(map(str, binary_prediction))
-    print(f"Input: {segment} -> Predicted Binary: {binary_str}")
+    print(f"Input: {segment} -> Predicted Binary: {binary_prediction}")
