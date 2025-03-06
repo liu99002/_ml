@@ -13,7 +13,7 @@ for k in range(1000):
     z.grad = 0
 
     f.backward()
-    print(f'{f}')
+    print(f'\nf.data {f.data:.4f}')
     x.data -= x.grad * step
     y.data -= y.grad * step
     z.data -= z.grad * step
