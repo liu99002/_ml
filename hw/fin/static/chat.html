@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>聊天助手</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- 側邊欄 -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h2>聊天助手</h2>
+                <button id="new-chat-btn" class="new-chat-btn">+ 新對話</button>
+            </div>
+            <div class="chat-sessions" id="chat-sessions">
+                <!-- 聊天會話列表將在這裡動態載入 -->
+            </div>
+        </div>
+
+        <!-- 主聊天區域 -->
+        <div class="main-chat">
+            <div class="chat-header">
+                <h3 id="current-session-title">選擇或創建一個對話</h3>
+                <button id="delete-session-btn" class="delete-btn" style="display: none;">刪除對話</button>
+            </div>
+            
+            <div class="chat-messages" id="chat-messages">
+                <div class="welcome-message">
+                    <h2>歡迎使用聊天助手 🤖</h2>
+                    <p>我是基於大語言模型和 MCP 工具的智能助手，可以幫助您處理各種問題。</p>
+                    <p>請選擇現有對話或創建新對話開始聊天。</p>
+                </div>
+            </div>
+            
+            <div class="chat-input-container" id="chat-input-container" style="display: none;">
+                <div class="typing-indicator" id="typing-indicator" style="display: none;">
+                    <span class="typing-dot"></span>
+                    <span class="typing-dot"></span>
+                    <span class="typing-dot"></span>
+                    <span class="typing-text">AI 正在思考...</span>
+                </div>
+                <div class="chat-input">
+                    <textarea id="message-input" placeholder="輸入您的問題..." rows="1"></textarea>
+                    <button id="send-btn" class="send-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M22 2L11 13" stroke="currentColor" stroke-width="2"/>
+                            <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="/static/script.js"></script>
+</body>
+</html>

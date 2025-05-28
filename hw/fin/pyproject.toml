@@ -1,0 +1,26 @@
+[project]
+name = "fin"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "asttokens>=3.0.0",
+    "fastapi>=0.115.12",
+    "faster-whisper>=1.1.1",
+    "fastmcp>=2.5.1",
+    "langchain-google-genai>=2.1.5",
+    "langchain-mcp-adapters>=0.1.1",
+    "langgraph>=0.4.7",
+    "langgraph-checkpoint-mongodb>=0.1.3",
+    "langmem>=0.0.27",
+    "motor>=3.7.1",
+    "moviepy>=2.2.1",
+    "nvidia-cudnn-cu12>=9.10.1.4",
+    "opencc>=1.1.9",
+    "pip>=25.1.1",
+    "python-dotenv>=1.1.0",
+    "pytubefix>=9.1.1",
+    "uvicorn>=0.34.2",
+    "websockets>=15.0.1",
+]
