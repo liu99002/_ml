@@ -29,4 +29,4 @@
 
 * [Whisper.py](https://github.com/liu99002/_ml/blob/main/hw/fin/Whisper.py)
     > 產生字幕檔
-    > 參考資料: [Faster-Whisper 免费开源的高性能语音识别模型](https://techdiylife.github.io/blog/blog.html?category1=c02&blogid=0021)
+    > 參考資料: [Faster-Whisper 免费开源的高性能语音识别模型](https://techdiylife.github.io/blog/blog.html?category1=c02&blogid=0021)、范楊玄同學協助
