@@ -10,6 +10,7 @@
     > 參考資料: 
     > 1. [AsyncMongoDBSaver](https://langchain-mongodb.readthedocs.io/en/latest/langgraph_checkpoint_mongodb/aio/langgraph.checkpoint.mongodb.aio.AsyncMongoDBSaver.html#langgraph.checkpoint.mongodb.aio.AsyncMongoDBSaver)
     > 2. [create_react_agent](https://langchain-ai.github.io/langgraph/agents/agents/#1-install-dependencies)
+    > 3. [Day 18: langchain 由入門到熟練(建立 Agent-使用Open AI -API)](https://ithelp.ithome.com.tw/articles/10345369)
 
 * [mcp-server.py](https://github.com/liu99002/_ml/blob/main/hw/fin/mcp-server.py)
     > MCP Server 主程式
