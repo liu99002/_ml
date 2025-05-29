@@ -2,7 +2,7 @@ import torch
 import math
 
 dtype = torch.float
-x = torch.randn((), dtype=dtype, requires_grad=True) # torch.linspace(-math.pi, math.pi, 2000)
+x = torch.randn((), dtype=dtype, requires_grad=True)
 y = torch.randn((), dtype=dtype, requires_grad=True)
 z = torch.randn((), dtype=dtype, requires_grad=True)
 
