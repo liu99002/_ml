@@ -33,4 +33,6 @@
     > 參考資料: [Faster-Whisper 免费开源的高性能语音识别模型](https://techdiylife.github.io/blog/blog.html?category1=c02&blogid=0021)、范揚玄同學協助
 
 # 使用方法
-'python app.py'
+1. `uv async` 
+2. `uv run app.py`
+
