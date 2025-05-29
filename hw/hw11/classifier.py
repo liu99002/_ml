@@ -1,6 +1,6 @@
 import pandas as pd
 import ml
-file_path = r"C:\Users\user\Desktop\機器學習\_ml\hw\hw11\data.csv"
+file_path = r"C:\Users\liu99\Desktop\機器學習\_ml\hw\hw11\data.csv"
 
 df = pd.read_csv(file_path)
 

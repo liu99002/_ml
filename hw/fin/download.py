@@ -1,6 +1,4 @@
-# 程式碼需修改導入語句
 from pytubefix import YouTube
-from pytubefix.cli import on_progress
 import asyncio
 
 async def download_youtube_video(url):
@@ -12,5 +10,5 @@ async def download_youtube_video(url):
     return f"影片長度為: {video_length_seconds}秒"
 
 if __name__ == "__main__":
-    video_url = input() # 替換為你要下載的影片網址
+    video_url = input()
     asyncio.run(download_youtube_video(video_url))

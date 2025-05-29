@@ -58,7 +58,7 @@ def grad(f, p, h=0.01):
     return gp
 
 # 使用梯度下降法尋找函數最低點
-def gradientDescendent(f, p0, h=0.01, max_loops=10000000, dump_period=1000):
+def gradientDescendent(f, p0, h=0.01, max_loops=10000, dump_period=1000):
     p = p0.copy()
     for i in range(max_loops):
         fp = f(p)

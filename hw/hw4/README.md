@@ -1,3 +1,6 @@
+# https://chatgpt.com/share/67bfcd7f-e060-8012-8ca8-d728b91db770
+使用老師給的ChatGPT 的參考進行修改
+
 # 結果
 60142:  f(p)=0.055 glen=0.00001
 
